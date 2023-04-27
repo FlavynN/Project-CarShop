@@ -27,4 +27,12 @@ export default class MotorcycleService {
     }
     return this.motorcycleDomain(getOneMotorcycle);
   }
+
+  public async updateMotorcycle(id: string, motorcycle: Partial<IMotorcycle>) {
+    const updateMotorcycle = await this.motorCycleODM.update(id, motorcycle);
+    if (!updateMotorcycle) {
+      return null;
+    }
+    return this.motorcycleDomain(updateMotorcycle);
+  }
 }
