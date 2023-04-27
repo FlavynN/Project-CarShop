@@ -27,4 +27,12 @@ export default class CarService {
     }
     return this.carDomain(getOneCar);
   }
+
+  public async updateCar(id: string, car: Partial<ICar>) {
+    const updateCar = await this.carODM.updateCar(id, car);
+    if (!updateCar) {
+      return null;
+    }
+    return this.carDomain(updateCar);
+  }
 }
