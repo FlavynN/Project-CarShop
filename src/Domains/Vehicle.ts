@@ -1,6 +1,6 @@
 import IVehicle from '../Interfaces/IVehicle';
 
-class Vehicle {
+export default class Vehicle {
   protected id: string | undefined;
   protected model: string;
   protected year: number;
@@ -17,5 +17,3 @@ class Vehicle {
     this.buyValue = vehicle.buyValue;
   }
 }
-
-export default Vehicle;

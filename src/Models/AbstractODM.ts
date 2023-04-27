@@ -1,6 +1,6 @@
 import { Model, Schema, UpdateQuery, isValidObjectId, model, models } from 'mongoose';
 
-abstract class AbstractODM<T> {
+export default abstract class AbstractODM<T> {
   protected model: Model<T>;
   protected schema: Schema;
   protected modelName: string;
@@ -32,5 +32,3 @@ abstract class AbstractODM<T> {
     );
   }
 }
-
-export default AbstractODM;
