@@ -10,5 +10,9 @@ routes.get('/cars/:id', (req, res, next) => new CarController(req, res, next).ge
 routes.patch('/cars/:id', (req, res, next) => new CarController(req, res, next).updateCar());
 
 routes.post('/motorcycles', (req, res, next) => new MotorcycleController(req, res, next).create());
+routes.get('/motorcycles', (req, res, next) => 
+  new MotorcycleController(req, res, next).getAllMotorcycles());
+routes.get('/motorcycles/:id', (req, res, next) =>
+  new MotorcycleController(req, res, next).getCarById());
 
 export default routes;
