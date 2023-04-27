@@ -40,8 +40,8 @@ export default class CarController {
   }
 
   public async getCarById() {
+    const { id } = this.req.params;
     try {
-      const { id } = this.req.params;
       const getOneCar = await this.service.getCarById(id);
       if (!getOneCar) {
         return this.res.status(404).json({ message: 'Car not found' });

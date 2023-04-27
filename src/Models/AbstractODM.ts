@@ -20,7 +20,7 @@ abstract class AbstractODM<T> {
   }
 
   public async findById(id: string) {
-    return this.model.findOne({ id });
+    return this.model.findOne({ _id: id });
   }
 }
 

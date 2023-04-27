@@ -22,7 +22,9 @@ export default class CarService {
 
   public async getCarById(id: string) {
     const getOneCar = await this.carODM.findById(id);
-    if (!getOneCar) throw new Error('Car not found');
+    if (!getOneCar) { 
+      return null; 
+    }
     return this.carDomain(getOneCar);
   }
 }
