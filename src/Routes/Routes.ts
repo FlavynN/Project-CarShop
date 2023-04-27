@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import CarController from '../Controllers/CarController';
+import MotorcycleController from '../Controllers/MotorcycleController';
 
 const routes = Router();
 
@@ -7,5 +8,7 @@ routes.post('/cars', (req, res, next) => new CarController(req, res, next).creat
 routes.get('/cars', (req, res, next) => new CarController(req, res, next).getAllCars());
 routes.get('/cars/:id', (req, res, next) => new CarController(req, res, next).getCarById());
 routes.patch('/cars/:id', (req, res, next) => new CarController(req, res, next).updateCar());
+
+routes.post('/motorcycles', (req, res, next) => new MotorcycleController(req, res, next).create());
 
 export default routes;

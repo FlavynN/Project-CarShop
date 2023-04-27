@@ -1,4 +1,4 @@
-export interface IVehicle {
+export default interface IVehicle {
   id?: string,
   model: string,
   year: number,

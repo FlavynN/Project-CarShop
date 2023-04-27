@@ -29,7 +29,7 @@ export default class CarService {
   }
 
   public async updateCar(id: string, car: Partial<ICar>) {
-    const updateCar = await this.carODM.updateCar(id, car);
+    const updateCar = await this.carODM.update(id, car);
     if (!updateCar) {
       return null;
     }
