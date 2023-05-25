@@ -9,12 +9,15 @@ This Project is a CarShop CRUD, where you can Create, Read, update and delete in
 * TypeScript
 * Mongodb
 * Docker
+* Mongoose
+* Sinon
 
 ## What was build?
 
 * Car CRUD
 * Motorbike CRUD
 * Docker Containers to run the App and the db. 
+* Unit Tests for Service layer
 
 
 
