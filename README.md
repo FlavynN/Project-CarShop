@@ -12,7 +12,7 @@ This Project is a CarShop CRUD, where you can Create, Read, update and delete in
 * Mongoose
 * Sinon
 
-## What was build?
+## What was built?
 
 * Car CRUD
 * Motorbike CRUD
